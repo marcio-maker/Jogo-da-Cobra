@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cobra.css">
+    <script defer src="cobra.js"></script>
+    <title>JOGO DA SERPENTE</title>
+</head>
+
+<body class="regras">
+    <header>
+        <div id="score">Pontuação: 0</div>
+        <audio id="eatSound" src="eat.mp3"></audio>
+        <audio id="gameOverSound" src="gameover.mp3"></audio>
+        <div id="menu">
+            <h2>Escolha o Nível de Dificuldade</h2>
+            <button onclick="iniciarJogoComDificuldade(200)">Fácil</button>
+            <button onclick="iniciarJogoComDificuldade(150)">Médio</button>
+            <button onclick="iniciarJogoComDificuldade(100)">Difícil</button>
+            <button onclick="iniciarJogoComDificuldade(75)">Muito Difícil</button>
+            <button onclick="iniciarJogoComDificuldade(50)">Insano</button>
+        </div>
+        <h1>JOGO DA SERPENTE</h1>
+    </header>
+
+    <main>
+        <div>
+            <canvas id="snake" width="512" height="512"></canvas>
+        </div>
+        <div>
+            <button class="botao" type="button" onclick="novoJogo()">NOVO JOGO</button>
+        </div>
+        <div id="gameOverScreen" style="display: none;">
+            <h2>Game Over!</h2>
+            <p>Sua pontuação: <span id="finalScore">0</span></p>
+            <button onclick="novoJogo()">Jogar Novamente</button>
+            <button onclick="voltarAoMenu()">Voltar ao Menu</button>
+        </div>
+    </main>
+</body>
+
+</html>
